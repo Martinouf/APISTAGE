@@ -24,7 +24,7 @@ class ApiStudentController extends AbstractController
      */
     public function index( StudentRepository $studentRepository, NormalizerInterface $normalizer, ApiKeyService $apiKeyService, Request $request): JsonResponse
     {
-        //
+        //1. Vérification de la sécurité
         $authorized = $apiKeyService->checkApiKey($request);
 
         dd($authorized);
