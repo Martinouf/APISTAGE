@@ -19,6 +19,7 @@ class ApiKeyService
         //1. Contient le header API-KEY?
         //Attention les Headers HTTP ne peuvent pas avoir de underscore
         $API_KEY = $request->headers->get('API-KEY');
+        $API_KEY=strlen($request->headers->get('API-KEY'))==42;
 
         //Contenu API_KEY
         if($API_KEY)
