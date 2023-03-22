@@ -7,6 +7,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Repository\StudentRepository;
+use App\Service\ApiKeyService;
 use DateTime;
 use Symfony\Component\HttpFoundation\Request;
 use Doctrine\ORM\EntityManagerInterface;
@@ -21,8 +22,12 @@ class ApiStudentController extends AbstractController
      * methods={"GET"}
      * )
      */
-    public function index( StudentRepository $studentRepository, NormalizerInterface $normalizer ): JsonResponse
+    public function index( StudentRepository $studentRepository, NormalizerInterface $normalizer, ApiKeyService $apiKeyService, Request $request): JsonResponse
     {
+        //
+        $authorized = $apiKeyService->checkApiKey($request);
+
+        dd($authorized);
 
         //Récup tout les étudiants
         $student = $studentRepository->findAll();
