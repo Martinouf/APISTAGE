@@ -127,19 +127,6 @@ Vérifiez les routes existantes.
 ***
 ***
 
-# Travail à faire
-
-* Améliorez l'existant (vérification, retirer les commandes de debug **dd**, contenu des réponses)
-* Ajouter un contrôleur **Company** sur le même modèle.
-* Publiez le résultat dans votre GitHub et fournissez l'url à l'enseignant.
-* Générer une documentation de l'API
-  * https://github.com/slatedocs/slate
-  * https://github.com/nelmio/NelmioApiDocBundle
-  * https://swagger.io/solutions/api-documentation/
-  * https://readme.com/documentation
-  * https://github.com/Mermade/widdershins
-  * https://www.postman.com/api-documentation-tool/
-
 # Entité Company
 
 ```bash
@@ -181,8 +168,6 @@ symfony console make:migration
 
 symfony console d:m:m
 
-![doc/img.png](doc/img.png)
-
 On fait ensuite le controller ApiInternshipController avec les actions
 
 * index
@@ -191,8 +176,6 @@ On fait ensuite le controller ApiInternshipController avec les actions
 > Si on retente les routes pour lister les étudiants
 > 
 Message **Circular Reference**
-
-![](doc/circular_reference.png)
 
 Il faut ajouter un contexte au normalizer.
 
@@ -207,14 +190,11 @@ Il faut ajouter un contexte au normalizer.
 
 GET /api/student
 
-![](doc/student_list.png)
-
 ### Ajour d'un étudiant
 
 POST /api/student
 
 Attention au Header, qui DOIT être en json
-![](doc/header_json.png)
 
 Payload à fournir:
 ```json
