@@ -10,17 +10,9 @@
 > Vous devez avoir le module **sqlite3** d'activé sur votre installation PHP.
 > Pour vérifier: `php -m`
 
-## Installation from scratch 
-
-Installation de Symfony en version minimale (aucune dépendance, il faudra **tout** installer manuellement)
-
-```bash
-symfony new API-Gestion-Stages-Etudiants --version="5.4"
-```
-
 ### Liste des dépendances à ajouter
 
-Via composer, vous allez ajouter les dépendances suivantes, elles seront utiles ultérieurement.
+Nous devons installer les dépendances dont nous aurons besoin tout au long de ce projet.
 
 ```bash
 # Uniquement en environnement de dev, un bundle facilitant la création d'éléments dans Symfony
