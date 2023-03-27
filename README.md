@@ -199,11 +199,11 @@ Attention au Header, qui DOIT être en json
 Payload à fournir:
 ```json
 {
-    "name":"didier",
-    "firstname":"favreau",
-    "picture": "TEST image vide",
-    "date_of_birth": "15-05-1981",
-    "grade": "PROF"
+    "name":"Binant",
+    "firstname":"Martin",
+    "picture": "",
+    "date_of_birth": "29-08-2001",
+    "grade": "SLAM2"
 }
 ```
 
