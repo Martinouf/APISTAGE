@@ -1,5 +1,9 @@
 # APISTAGE
 
+#### Collection Postman des requêtes de l'API:
+
+https://documenter.getpostman.com/view/23342129/2s93RL2GQB
+
 ## Bonjour, bienvenue sur le dépôt de mon API Stage.
    
 ### Ce projet consiste à découvrir la création d'une API avec symfony.
